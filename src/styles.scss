@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    padding-top: 24px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+}
+
+form {
+    margin: auto;
+    width: 250px;
+    padding: 24px;
+    input {
+        margin: 4px auto;
+        display: block;        
+    }
+    button {
+        margin: 4px;
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    li {
+        padding: 0;
+    }
+}

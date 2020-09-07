@@ -1,0 +1,23 @@
+<div class="student-expenses-container">
+    <h3>{{student.name}}</h3>
+
+    <button (click)="deleteStudent()">Delete Student</button>
+    
+    <p>Expenses</p>
+    <ul>
+        <li *ngFor="let expense of student.expenses">{{expense.cost | currency : 'USD'}} <span *ngIf="expense.desc"> - {{expense.desc}}</span></li>
+    </ul>
+    
+    <form [formGroup]="newExpenseForm">
+        <h3>New Expense</h3>
+        <label for="newExpenseCost">
+            Cost
+            <input id="newExpenseCost" type="number" aria-label="Cost" formControlName="cost">    
+        </label>
+        <label for="newExpenseDesc">
+            Description
+            <input id="newExpenseDesc" type="text" aria-label="Description" formControlName="desc">
+        </label>
+        <button (click)="addExpense($event)">Add Expense</button>
+    </form>
+</div>
