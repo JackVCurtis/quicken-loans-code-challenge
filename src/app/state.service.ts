@@ -35,4 +35,8 @@ export class StateService {
   addExpense(studentIndex: number, expenseCost: number, expenseDesc: string) {
     this.state.students[studentIndex].expenses.push({cost: expenseCost, desc: expenseDesc});
   }
+
+  deleteExpense(studentIndex: number, expenseIndex: number) {
+    this.state.students[studentIndex].expenses.splice(expenseIndex, 1);
+  }
 }

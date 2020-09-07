@@ -5,7 +5,10 @@
     
     <p>Expenses</p>
     <ul>
-        <li *ngFor="let expense of student.expenses">{{expense.cost | currency : 'USD'}} <span *ngIf="expense.desc"> - {{expense.desc}}</span></li>
+        <li *ngFor="let expense of student.expenses; index as i">
+            {{expense.cost | currency : 'USD'}} <span *ngIf="expense.desc"> - {{expense.desc}}</span>
+            <button (click)="deleteExpense(i)">Delete Expense</button>
+        </li>
     </ul>
     
     <form [formGroup]="newExpenseForm">

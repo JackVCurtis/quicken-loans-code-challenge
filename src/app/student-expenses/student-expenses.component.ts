@@ -30,4 +30,8 @@ export class StudentExpensesComponent {
     this.stateService.addExpense(this.index, values.cost, values.desc);
     this.newExpenseForm.setValue({cost: null, desc: ''});
   }
+
+  deleteExpense(index) {
+    this.stateService.deleteExpense(this.index, index);
+  }
 }
